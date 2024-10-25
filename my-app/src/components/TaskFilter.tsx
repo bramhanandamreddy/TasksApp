@@ -1,4 +1,4 @@
-import "./App.css";
+import "./taskFilter.css";
 
 interface TaskFilterProps {
   filter: string;
@@ -7,9 +7,15 @@ interface TaskFilterProps {
 
 const TaskFilter: React.FC<TaskFilterProps> = ({ filter, onChangeFilter }) => (
   <div>
-    <button onClick={() => onChangeFilter("all")}>All</button>
-    <button onClick={() => onChangeFilter("completed")}>Completed</button>
-    <button onClick={() => onChangeFilter("pending")}>Pending</button>
+    <button className="button" onClick={() => onChangeFilter("all")}>
+      All
+    </button>
+    <button className="button" onClick={() => onChangeFilter("completed")}>
+      Completed
+    </button>
+    <button className="button" onClick={() => onChangeFilter("pending")}>
+      Pending
+    </button>
   </div>
 );
 

@@ -5,6 +5,7 @@ import { toggleTask, deleteTask } from "./redux/tasksSlice";
 import AddTask from "./components/AddTask";
 import TaskList from "./components/TaskList";
 import TaskFilter from "./components/TaskFilter";
+import "./components/taskFilter.css";
 
 const App: React.FC = () => {
   const [filter, setFilter] = useState<string>("all");
@@ -26,7 +27,7 @@ const App: React.FC = () => {
   });
 
   return (
-    <div>
+    <div className="task">
       <h1>Task Manager</h1>
       <AddTask />
       <TaskFilter filter={filter} onChangeFilter={setFilter} />

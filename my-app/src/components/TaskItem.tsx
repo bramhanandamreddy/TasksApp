@@ -1,6 +1,7 @@
 import React from "react";
 //import { Task } from "../redux/tasksSlice";
 import { Task } from "../redux/type";
+import "./taskFilter.css";
 
 interface TaskItemProps {
   task: Task;
@@ -11,6 +12,7 @@ interface TaskItemProps {
 const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete }) => (
   <div>
     <input
+      className="input"
       type="checkbox"
       checked={task.completed}
       onChange={() => onToggle(task.id)}
@@ -18,7 +20,9 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete }) => (
     <span style={{ textDecoration: task.completed ? "line-through" : "none" }}>
       {task.title}
     </span>
-    <button onClick={() => onDelete(task.id)}>Delete</button>
+    <button className="button" onClick={() => onDelete(task.id)}>
+      Delete
+    </button>
   </div>
 );
 

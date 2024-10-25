@@ -1,0 +1,18 @@
+.button {
+  height: 50px;
+  width: 100px;
+  background-color: aquamarine;
+  font-size: medium;
+  color: brown;
+  padding: 16px;
+}
+
+.input {
+  height: 50px;
+  width: 350px;
+  font-size: medium;
+}
+
+.task {
+  text-align: center;
+}

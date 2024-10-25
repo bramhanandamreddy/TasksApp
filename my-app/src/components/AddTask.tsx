@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTask } from "../redux/tasksSlice";
-import "./App.css";
+import "./taskFilter.css";
 
 const AddTask: React.FC = () => {
   const [title, setTitle] = useState("");
@@ -23,13 +23,16 @@ const AddTask: React.FC = () => {
   return (
     <div className="add-task">
       <input
+        className="input"
         type="text"
         placeholder="Add new Task..."
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         onKeyPress={handleEnter}
       />
-      <button onClick={handleAdd}>Add</button>
+      <button className="button" onClick={handleAdd}>
+        Add Task
+      </button>
     </div>
   );
 };
